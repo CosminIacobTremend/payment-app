@@ -1,2 +1,15 @@
 server:
   port: 8002
+spring:
+  datasource:
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/payment_db
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties.hibernate:
+      jdbc.lob.non_contextual_creation: true
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true

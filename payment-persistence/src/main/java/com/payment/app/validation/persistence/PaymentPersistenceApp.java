@@ -1,9 +1,13 @@
 package com.payment.app.validation.persistence;
 
+import com.payment.app.lib.MicroService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@MicroService
 public class PaymentPersistenceApp {
 
   public static void main(String[] args) {
