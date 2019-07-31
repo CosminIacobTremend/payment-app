@@ -15,10 +15,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "client")
-@EqualsAndHashCode(of = "cnp")
 @Getter
 @Setter
+@Table(name = "client")
+@EqualsAndHashCode(of = "id")
 public class Client {
 
   @Id

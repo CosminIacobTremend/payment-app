@@ -3,7 +3,7 @@ create table client
     id bigserial not null
         constraint client_pkey
             primary key,
-    cnp varchar(255) not null,
+    cnp varchar(255) not null unique,
     email varchar(255) not null ,
     first_name varchar(255) not null,
     last_name varchar(255) not null
@@ -16,7 +16,7 @@ create table account
     id serial not null
         constraint account_pkey
             primary key,
-    iban varchar(255) not null,
+    iban varchar(255) not null unique,
     client_id bigint not null
         constraint account_fk_client
             references client(id)

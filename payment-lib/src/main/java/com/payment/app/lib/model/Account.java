@@ -8,10 +8,21 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedAttributeNode;
+import javax.persistence.NamedEntityGraph;
 import javax.persistence.Table;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "account")
+@EqualsAndHashCode(of = "id")
+@NamedEntityGraph(name = "Account.client",
+    attributeNodes = @NamedAttributeNode("client")
+)
 public class Account {
 
   @Id
