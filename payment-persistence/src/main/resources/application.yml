@@ -1,6 +1,8 @@
 server:
   port: 8002
 spring:
+  application:
+    name: payment-persistence
   datasource:
     username: postgres
     password: postgres
@@ -13,3 +15,9 @@ spring:
       jdbc.lob.non_contextual_creation: true
       dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+integration:
+  kafka:
+    transactionTopic: transactions
