@@ -11,5 +11,6 @@ import org.springframework.context.annotation.Configuration;
 @Setter
 public class KafkaConfig {
   private String transactionTopic;
+  private String statisticTopic;
 
 }

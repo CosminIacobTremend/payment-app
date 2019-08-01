@@ -4,6 +4,7 @@ import com.payment.app.validation.persistence.dto.TransactionStatisticDto;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.kafka.streams.KeyValue;
+import org.apache.kafka.streams.kstream.GlobalKTable;
 import org.apache.kafka.streams.kstream.KTable;
 import org.apache.kafka.streams.state.KeyValueIterator;
 import org.apache.kafka.streams.state.QueryableStoreTypes;
@@ -14,11 +15,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TransactionStatisticService {
-  private final KTable<String, TransactionStatisticDto> transactionStatisticTable;
+  private final GlobalKTable<String, TransactionStatisticDto> transactionStatisticTable;
   private final StreamsBuilderFactoryBean streamsBuilderFactoryBean;
 
   public TransactionStatisticService(
-      KTable<String, TransactionStatisticDto> transactionStatisticTable,
+      GlobalKTable<String, TransactionStatisticDto> transactionStatisticTable,
       @Qualifier("streamBuilder") StreamsBuilderFactoryBean streamsBuilderFactoryBean) {
     this.transactionStatisticTable = transactionStatisticTable;
     this.streamsBuilderFactoryBean = streamsBuilderFactoryBean;

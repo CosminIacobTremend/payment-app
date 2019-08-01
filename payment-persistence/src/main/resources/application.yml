@@ -21,3 +21,4 @@ spring:
 integration:
   kafka:
     transactionTopic: transactions
+    statisticTopic: transactions_statistics
