@@ -1,7 +1,6 @@
 package com.payment.app.validation.persistence.service;
 
 import com.payment.app.lib.dto.TransactionDto;
-import com.payment.app.lib.dto.TransactionType;
 import com.payment.app.lib.model.Transaction;
 import com.payment.app.lib.repository.AccountRepository;
 import com.payment.app.lib.repository.ClientRepository;
