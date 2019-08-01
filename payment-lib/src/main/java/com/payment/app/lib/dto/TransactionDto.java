@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,7 +25,7 @@ public class TransactionDto {
   @NotEmpty
   private String name;
   private String description;
-  @Min(0)
+  @Positive
   private double sum;
   @NotNull
   private TransactionType transactionType;
