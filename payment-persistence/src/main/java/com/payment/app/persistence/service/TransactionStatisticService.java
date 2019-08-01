@@ -1,11 +1,10 @@
-package com.payment.app.validation.persistence.service;
+package com.payment.app.persistence.service;
 
-import com.payment.app.validation.persistence.dto.TransactionStatisticDto;
+import com.payment.app.persistence.dto.TransactionStatisticDto;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.kstream.GlobalKTable;
-import org.apache.kafka.streams.kstream.KTable;
 import org.apache.kafka.streams.state.KeyValueIterator;
 import org.apache.kafka.streams.state.QueryableStoreTypes;
 import org.apache.kafka.streams.state.ReadOnlyKeyValueStore;

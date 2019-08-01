@@ -1,4 +1,4 @@
-package com.payment.app.validation.persistence.dto;
+package com.payment.app.persistence.dto;
 
 import com.payment.app.lib.dto.TransactionType;
 import java.util.Arrays;

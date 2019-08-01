@@ -1,4 +1,4 @@
-package com.payment.app.validation.persistence.service;
+package com.payment.app.persistence.service;
 
 import com.payment.app.lib.dto.TransactionDto;
 import com.payment.app.lib.model.Transaction;

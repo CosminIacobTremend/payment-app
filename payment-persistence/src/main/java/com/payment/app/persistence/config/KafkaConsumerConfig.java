@@ -1,4 +1,4 @@
-package com.payment.app.validation.persistence.config;
+package com.payment.app.persistence.config;
 
 import com.payment.app.lib.config.KafkaConfig;
 import com.payment.app.lib.dto.TransactionDto;

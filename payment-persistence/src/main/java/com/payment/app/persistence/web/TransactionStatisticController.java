@@ -1,6 +1,6 @@
-package com.payment.app.validation.persistence.web;
+package com.payment.app.persistence.web;
 
-import com.payment.app.validation.persistence.service.TransactionStatisticService;
+import com.payment.app.persistence.service.TransactionStatisticService;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

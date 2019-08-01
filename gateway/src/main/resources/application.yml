@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: zuul
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+zuul:
+  retryable: true
+  routes:
+    validation:
+      path: '/validation/**'
+      serviceId: PAYMENT-VALIDATION
+    persistence:
+      paht: '/persistence/**'
+      serviceId: PAYMENT-PERSISTENCE

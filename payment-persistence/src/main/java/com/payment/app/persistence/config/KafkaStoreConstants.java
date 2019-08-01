@@ -1,4 +1,4 @@
-package com.payment.app.validation.persistence.config;
+package com.payment.app.persistence.config;
 
 public class KafkaStoreConstants {
   public static final String TRANSACTION_STATISTIC_TABLE_STORE = "TRANSACTION_STATISTIC_TABLE_STORE";

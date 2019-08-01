@@ -8,6 +8,8 @@
     <module>payment-validation</module>
     <module>payment-lib</module>
     <module>payment-persistence</module>
+    <module>discovery-server</module>
+    <module>gateway</module>
   </modules>
 
   <parent>
@@ -26,5 +28,17 @@
   <properties>
     <java.version>1.8</java.version>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-parent</artifactId>
+        <version>Greenwich.RELEASE</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
 </project>

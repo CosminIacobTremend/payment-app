@@ -1,8 +1,8 @@
-package com.payment.app.validation.persistence.streams;
+package com.payment.app.persistence.streams;
 
 import com.payment.app.lib.dto.TransactionDto;
 import com.payment.app.lib.dto.TransactionType;
-import com.payment.app.validation.persistence.dto.TransactionStatisticDto;
+import com.payment.app.persistence.dto.TransactionStatisticDto;
 import java.util.Map;
 import org.apache.kafka.streams.kstream.Aggregator;
 import org.springframework.stereotype.Component;

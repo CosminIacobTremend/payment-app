@@ -1,10 +1,10 @@
-package com.payment.app.validation.persistence.streams;
+package com.payment.app.persistence.streams;
 
 import com.payment.app.lib.config.KafkaConfig;
 import com.payment.app.lib.dto.TransactionDto;
-import com.payment.app.validation.persistence.config.KafkaStoreConstants;
-import com.payment.app.validation.persistence.dto.TransactionStatisticDto;
-import com.payment.app.validation.persistence.service.TransactionService;
+import com.payment.app.persistence.config.KafkaStoreConstants;
+import com.payment.app.persistence.dto.TransactionStatisticDto;
+import com.payment.app.persistence.service.TransactionService;
 import javax.annotation.PostConstruct;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.common.utils.Bytes;
@@ -55,7 +55,7 @@ public class TransactionProcessingStreams {
         .aggregate(new TransactionStatisticDto(),
             transactionStatisticAggregator,
             Materialized.<String, TransactionStatisticDto, KeyValueStore<Bytes, byte[]>>as(
-                KafkaStoreConstants.G_TRANSACTION_STATISTIC_TABLE_STORE)
+                KafkaStoreConstants.TRANSACTION_STATISTIC_TABLE_STORE)
                 .withKeySerde(Serdes.String())
                 .withValueSerde(new JsonSerde<>(TransactionStatisticDto.class))
                 .withCachingDisabled());

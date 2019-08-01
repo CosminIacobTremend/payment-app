@@ -1,5 +1,5 @@
 server:
-  port: 8002
+  port: 0
 spring:
   application:
     name: payment-persistence
@@ -22,3 +22,9 @@ integration:
   kafka:
     transactionTopic: transactions
     statisticTopic: transactions_statistics
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
